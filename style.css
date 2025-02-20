@@ -1,0 +1,155 @@
+/* Importing the Open Sans font from Google Fonts with different weights */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+/* Define custom CSS variables (colors) for the theme */
+:root {
+    --golden: #c59d5f; /* Golden color for highlights */
+    --dark-navy: #1e2a47; /* Dark navy background color */
+    --dark-gray: #2e3b4e; /* Dark gray for sections */
+    --light-gray: #f0f1f6; /* Light gray text color */
+    --white: #ffffff; /* White color for text */
+    --muted-beige: #d1c8b1; /* Muted beige for borders */
+    --soft-blue: #5a8fcb; /* Soft blue for highlighting prices */
+}
+
+/* Universal styles applied to all elements */
+* {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    box-sizing: border-box; /* Ensure consistent box sizing */
+    font-family: 'Open Sans', sans-serif; /* Apply Open Sans font globally */
+    color: var(--light-gray); /* Default text color is light gray */
+}
+
+/* Body styles: set background and text color */
+body {
+    background-color: var(--dark-navy); /* Dark navy background */
+    color: var(--light-gray); /* Light gray text */
+    font-size: 16px; /* Set base font size */
+    line-height: 1.6; /* Increase line height for readability */
+}
+/* Menu Title styling */
+.menu-title {
+    margin-top: 3rem; /* Add space above the title */
+    text-align: center; /* Center the title */
+    color: var(--white); /* White color for the title */
+}
+
+/* Span inside menu title, gives it golden color and underline */
+.menu-title span {
+    font-size: 2.4rem; /* Larger font size for emphasis */
+    font-weight: 700; /* Make the font bold */
+    color: var(--golden); /* Golden color for the span */
+    border-bottom: 3px solid var(--golden); /* Golden underline for the span */
+    padding-bottom: 8px; /* Add space below the text */
+}
+
+/* Category tabs (e.g. Breakfast, Lunch, Dinner) styles */
+.catagories ul {
+    display: flex; /* Use flexbox to lay out items horizontally */
+    justify-content: center; /* Center the list horizontally */
+    list-style: none; /* Remove default list styling (bullets) */
+    margin-top: 30px; /* Add space above the categories */
+    gap: 20px; /* Space between the categories */
+}
+
+/* Individual category item styles */
+.catagories ul li {
+    padding: 8px 20px; /* Add padding around each item */
+    font-size: 1.1rem; /* Slightly larger font size */
+    background-color: var(--dark-gray); /* Dark gray background for each category */
+    border: 2px solid var(--muted-beige); /* Muted beige border around each item */
+    border-radius: 20px; /* Rounded corners */
+    color: var(--muted-beige); /* Muted beige text color */
+    text-transform: uppercase; /* Capitalize the text */
+    font-weight: 600; /* Make the text slightly bold */
+    transition: background-color 0.3s, color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Category item hover effects */
+.catagories ul li:hover {
+    background-color: var(--golden); /* Golden background when hovered */
+    color: var(--dark-navy); /* Dark navy text color when hovered */
+    cursor: pointer; /* Change cursor to pointer to indicate interactivity */
+}
+
+/* Food container styling for grid layout */
+.food-container {
+    margin-top: 30px; /* Add space above the food container */
+}
+
+/* Food box container (individual food items) */
+.foodbox {
+    margin-bottom: 30px; /* Space below each food box */
+}
+
+/* Styling for food images */
+.content .c-image {
+    width: 100%; /* Make the image take the full width */
+    max-width: 1000px; /* Limit the image width */
+    height: auto; /* Maintain aspect ratio */
+    border: 3px solid var(--muted-beige); /* Add muted beige border around the image */
+    border-radius: 10px; /* Round the corners of the image */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Add a shadow for depth */
+}
+
+/* Container for title, price, and description of each food item */
+.content .t-n-p {
+    background-color: var(--dark-gray); /* Dark gray background */
+    padding: 30px; /* Add padding inside the box */
+    border-radius: 15px; /* Round the corners of the box */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Add shadow for depth */
+    display: flex; /* Use flexbox layout */
+    flex-direction: column; /* Stack the content vertically */
+    gap: 20px; /* Add space between items */
+}
+
+/* Header section inside each food item box (Title and Price) */
+.content .t-n-p .header {
+    display: flex; /* Use flexbox to align title and price */
+    justify-content: space-between; /* Space out the title and price */
+    border-bottom: 2px solid var(--golden); /* Add a golden line below the header */
+    padding-bottom: 10px; /* Add space below the header */
+}
+
+/* Title of each food item */
+.content .t-n-p .title {
+    font-size: 1.2rem; /* Slightly larger font size */
+    font-weight: 700; /* Make the title bold */
+    color: var(--white); /* White text color for the title */
+}
+
+/* Price of each food item */
+.content .t-n-p .price {
+    font-size: 1.2rem; /* Slightly larger font size for the price */
+    font-weight: 800; /* Make the price bold */
+    color: var(--soft-blue); /* Soft blue color for the price */
+}
+
+/* Description of the food item */
+.content .t-n-p .des p {
+    font-size: 1rem; /* Regular font size for description */
+    color: var(--light-gray); /* Light gray text color */
+    line-height: 1.6; /* Increased line height for readability */
+    font-weight: 300; /* Lighter weight for the description */
+}
+
+/* Final Bill Section Styling */
+.final-bill {
+    background-color: var(--dark-gray); /* Dark gray background */
+    padding: 30px; /* Padding inside the bill container */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Shadow for depth */
+}
+
+/* List of items in the bill */
+#bill-items {
+    margin-bottom: 20px; /* Add space below the list of bill items */
+}
+
+/* Total price display in the bill */
+#total-price {
+    font-size: 1.5rem; /* Larger font for total price */
+    color: var(--golden); /* Golden color for total price */
+    font-weight: bold; /* Make total price bold */
+}
